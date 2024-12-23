@@ -1,0 +1,16 @@
+{% load static %}
+
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <a href="{% url 'Products:home' %}">
+                <img src="{% static 'logo.png' %}" alt="GlowMart">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'Products:home' %}">Home</a></li>
+            <li><a href="{% url 'About:about' %}">About</a></li>
+            <li><a href="{% url 'Contact:contact' %}">Contact</a></li>
+        </ul>
+    </div>
+</nav>

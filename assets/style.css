@@ -1,0 +1,365 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-top: 1.5rem;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px; /* Adjust for smaller width */
+    margin: 2rem auto; /* Center the section */
+    padding: 1rem;
+}
+
+/* Individual Product Div */
+.product {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start; /* Align items to the top-left */
+    border: 1px solid black; /* Black border for each product */
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    min-height: 500px;
+}
+
+/* Product Image Styling */
+.product-image {
+    flex: 1;
+    max-width: 40%;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Product Details Styling */
+.product-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-details h2 {
+    font-size: 1.2rem;
+    color: #222;
+    margin: 0;
+}
+
+.product-details .price {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.product-details .description {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* General navbar styling */
+.navbar {
+    background-color: gray; /* Light background */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Center container inside the navbar */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Logo styling */
+.navbar .logo img {
+    height: 50px; /* Adjust logo height */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Navigation links */
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Individual navigation link */
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: white; /* Text color */
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect on links */
+.navbar .nav-links li a:hover {
+    color: black; /* Highlight color on hover */
+}
+
+
+
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.footer .footer-links li a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 0.9rem;
+}
+.footer .footer-links li a:hover {
+    color: white;
+}
+
+
+.about-section {
+    padding: 3rem;
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.about-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #4b0082;
+    text-transform: uppercase;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #4b0082;
+    border-bottom: 2px solid #4b0082;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 1.5rem 0;
+}
+
+.about-section ul, .about-section ol {
+    margin: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.about-section ul li, .about-section ol li {
+    margin: 0.8rem 0;
+}
+
+.about-section ul li strong, .about-section ol li strong {
+    color: #4b0082;
+}
+
+.about-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Contact Form Container */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Fields */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Form Field Focus Effect */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    outline: none;
+    border: 1px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Textarea Field */
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-left: 50%;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Form Heading Styling */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+.container {
+    display: flex; /* Makes it a flexbox layout */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Space between images and details */
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Images Section (Left Side) */
+.images-section {
+    flex: 1; /* Takes up 50% width */
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 15px; /* Adds space between images */
+    margin-right: 30px; /* Space between images and details */
+}
+
+.images-section img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Details Section (Right Side) */
+.details-section {
+    flex: 1; /* Takes up 50% width */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Uniform spacing between elements */
+    margin-top: 20px;
+}
+
+.details-section h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0; /* Remove default margins */
+    line-height: 1.2;
+}
+
+.details-section p.price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #28a745; /* Green price text */
+    margin: 0; /* Remove default margins */
+}
+
+/* Centering and Styling the Button */
+.order-button-link {
+    display: block; /* Makes the link block-level to center it */
+    text-align: center; /* Center the button inside the link */
+    margin-top: 10px; /* Space between the price and the button */
+}
+
+.order-button-link button {
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    font-size: 1rem; /* Adjust button text size */
+    padding: 10px 20px; /* Space inside the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.order-button-link button:hover {
+    background-color: #218838; /* Slightly darker green on hover */
+}
+
+/* Description Styling */
+.details-section p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5; /* Improves readability */
+    margin-top: 15px; /* Adds space between button and description */
+}

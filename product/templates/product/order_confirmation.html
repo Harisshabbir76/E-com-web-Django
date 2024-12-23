@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<h1>Order Confirmation</h1>
+
+<p>Thank you, {{ order.name }}! Your order has been placed successfully.</p>
+<p><strong>Product:</strong> {{ order.product.title }}</p>
+<p><strong>Quantity:</strong> {{ order.quantity }}</p>
+<p><strong>Total Price:</strong> ${{ order.total_price }}</p>
+<p><strong>Shipping Address:</strong> {{ order.address }}</p>
+<p><strong>Phone Number:</strong> {{ order.phone_number }}</p>
+
+<a href="{% url 'Products:home' %}">Return to Home</a>
+{% endblock %}
