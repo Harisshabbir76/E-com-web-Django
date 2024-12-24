@@ -10,13 +10,11 @@
     <div class="details-section">
         <h1>{{ product.title }}</h1>
         <p class="price">Price: {{ product.price }}</p>
-
-        <form method="POST" action="{% url 'Products:add_to_cart' product.slug %}">
-            {% csrf_token %}
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" value="1" min="1" required>
-            <input type="submit" value="Add to Cart">
-        </form>
+        
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+       
+       
 
         <form method="POST" action="{% url 'Products:Order' product.slug %}">
             {% csrf_token %}

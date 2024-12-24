@@ -62,51 +62,5 @@ def checkOut(request, slug):
         return redirect('Products:home')    
 
 
-
 def Cart(request):
-    cart = request.session.get('cart', {})
-
-    cart_items = []
-    total_price = 0
-    for slug, item in cart.items():
-        product = get_object_or_404(Products, slug=slug)
-        quantity = item['quantity']
-        price = product.price * quantity
-        total_price += price
-        cart_items.append({
-            'product': product,
-            'quantity': quantity,
-            'price': price,
-        })
-
-    return render(request, 'product/cart.html', {
-        'cart_items': cart_items,
-        'total_price': total_price,
-    })
-
-
-def add_to_cart(request, slug):
-    product = get_object_or_404(Products, slug=slug)
-    cart = request.session.get('cart', {})
-
-    quantity = int(request.POST.get('quantity', 1))
-
-    if slug in cart:
-        cart[slug]['quantity'] += quantity
-    else:
-        cart[slug] = {'quantity': quantity}
-
-    request.session['cart'] = cart
-    return redirect('Products:cart')
-
-
-
-def remove_from_cart(request, slug):
-    cart = request.session.get('cart', {})
-
-    if slug in cart:
-        del cart[slug]
-
-    request.session['cart'] = cart
-
-    return redirect('Products:cart')
+    return render (request, 'product/cart.html')
