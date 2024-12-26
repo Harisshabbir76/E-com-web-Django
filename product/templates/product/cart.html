@@ -3,5 +3,21 @@
 {% block content %}
 <h1>Your Cart</h1>
 
+{% if cart_items %}
+    <ul>
+        {% for item in cart_items %}
+            <li>
+                {{ item.product.title }} - Quantity: {{ item.quantity }} 
+                <span>Price: {{ item.product.price }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+    <form action="{% url 'Products:cart' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Place Order">
+    </form>
+{% else %}
+    <p>Your cart is empty!</p>
+{% endif %}
 
 {% endblock %}

@@ -10,17 +10,24 @@
     <div class="details-section">
         <h1>{{ product.title }}</h1>
         <p class="price">Price: {{ product.price }}</p>
-        
-        <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" value="1" min="1" required>
-       
-       
 
-        <form method="POST" action="{% url 'Products:Order' product.slug %}">
+
+        <form method="POST" action="{% url 'Products:Detail' product.slug %}">
             {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Order Now">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+            <button type="submit" name="order_now">Order Now</button>
         </form>
+        
+        
+        <form method="POST" action="{% url 'Products:Detail' product.slug %}">
+            {% csrf_token %}
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+            <button type="submit" name="add_to_cart">Add to Cart</button>
+        </form>
+        
+        
 
         <p>{{ product.desc }}</p>
     </div>

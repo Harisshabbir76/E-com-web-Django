@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 class Products(models.Model):
     title=models.CharField(max_length=50)
@@ -29,3 +29,13 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Order for {self.product.title} by {self.name}"
+
+
+
+class CartItem(models.Model):
+    session_key = models.CharField(max_length=40, null=True, blank=True)
+    product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.product.title} - {self.quantity}"
